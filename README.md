@@ -1,1 +1,1 @@
-# gd-cassandra
+# GD - Cassandra Q/A
