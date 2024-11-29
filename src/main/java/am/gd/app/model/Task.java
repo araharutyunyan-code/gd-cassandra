@@ -1,20 +1,19 @@
 package am.gd.app.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.time.Instant;
 import java.util.UUID;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Task {
-    private UUID taskId;
-    private UUID userId;
-    private String title;
-    private String description;
-    private String status;
-    private Instant createdAt;
+public record Task(
+    UUID taskId,
+    UUID userId,
+    String title,
+    String description,
+    TaskStatus status,
+    Instant createdAt
+) {
+    public Task {
+        if (title == null || title.isBlank()) {
+            throw new IllegalArgumentException("Title cannot be empty");
+        }
+    }
 }
