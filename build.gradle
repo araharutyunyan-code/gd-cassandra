@@ -10,6 +10,15 @@ repositories {
 }
 
 dependencies {
+    // Cassandra drivers
+    implementation 'com.datastax.oss:java-driver-core:4.15.0'
+    implementation 'com.datastax.oss:java-driver-query-builder:4.15.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.9'
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.36'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }

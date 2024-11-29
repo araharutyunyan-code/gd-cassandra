@@ -33,5 +33,5 @@
 ## Delete:
 - Function to delete a task by its ID.
 
-## Docker Compose & Command to run cqlsh
+## Docker Compose && Command to run cqlsh
 #### docker exec -it cassandra cqlsh -u cassandra -p cassandra
